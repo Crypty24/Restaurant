@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="day">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gourmet Haven</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- IMAGE CONFIGURATION - EDIT YOUR IMAGES HERE -->
+  <script id="imageConfig" type="application/json">
+  {
+    "hero": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80",
+    "menu": {
+      "st1": "https://api.photon.aremedia.net.au/wp-content/uploads/sites/10/GourmetTraveller/2013/05/09/12856/0707truffaranc-628.jpg?fit=628%2C733",
+      "st2": "https://foolproofliving.com/wp-content/uploads/2023/05/Burrata-Caprese-recipe.jpg",
+      "st3": "https://www.anotherfoodblogger.com/wp-content/uploads/2021/11/DSC3153-scaled.jpg",
+      "st4": "https://www.onceuponachef.com/images/2022/03/how-to-cook-scallops-2-1200x1560.jpg",
+      "st5": "https://res.cloudinary.com/wildasset/image/upload/c_scale,w_1000,w_600/v1671808850/blog/WA_Dec_spotprawncocktail_177.jpg",
+      "st6": "https://www.allrecipes.com/thmb/vBnUwRr2uwHdd042IL3aSacUJoA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-149559-Roasted-Beets-with-Feta-ddmfs-4x3-94dc8f400eb44a54b824e48f4a897af2.jpg",
+      "m1": "https://cdn.aistoucuisine.com/assets/88191302-df23-4879-b02d-e30bfcb96f18/thieboudiene.webp?format=webp&quality=75&width=1280",
+      "m2": "https://www.afrikana.sk/blog/afrikana_sk/2022/286/image-thumb__286__lightbox/Atti%C3%A9ke%20s%20rybou.jpg",
+      "m3": "https://tourisme.parakou.bj/wp-content/uploads/2024/02/igname-pile.png",
+      "m4": "https://thesaltycooker.com/wp-content/uploads/2024/11/DUCKCONFIT-blog-scaled.jpg",
+      "m5": "https://amandascookin.com/wp-content/uploads/2022/03/Rack-of-Lamb-RCSQ.jpg",
+      "m6": "https://images.squarespace-cdn.com/content/v1/622109c6196d7f64544d312d/1675735760759-GMWL07PQ5T1JULABCL9K/cedarbakedsalmon38.jpg",
+      "d1": "https://images.getrecipekit.com/20250325120225-how-20to-20make-20chocolate-20molten-20lava-20cake-20in-20the-20microwave.png?width=650&quality=90&",
+      "d2": "https://www.recipetineats.com/tachyon/2016/09/Creme-Brulee_8-SQ.jpg",
+      "d3": "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?auto=format&fit=crop&w=400&q=80",
+      "d4": "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=400&q=80",
+      "d5": "https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=400&q=80",
+      "d6": "https://images.unsplash.com/photo-1452195100486-9cc805987862?auto=format&fit=crop&w=400&q=80",
+      "w1": "https://images.wine.co.za/GetWineImage.ashx?ImageSize=large&IMAGEID=269392",
+      "w2": "https://images.unsplash.com/photo-1553361371-9b22f78e8b1d?auto=format&fit=crop&w=400&q=80",
+      "w3": "https://images.unsplash.com/photo-1586370434639-0fe43b2d32d6?auto=format&fit=crop&w=400&q=80",
+      "w4": "",
+      "w5": "https://shop.santamargheritawines.com/cdn/shop/files/Product_SMCCR_4_1024x1024_63a1804f-b309-4d43-97b6-157b1a7a6acd.jpg?v=1712688709&width=1946",
+      "w6": "https://images.unsplash.com/photo-1547595628-c61a29f496f0?auto=format&fit=crop&w=400&q=80"
+    },
+    "highlights": {
+      "mushrooms": "https://i0.wp.com/cringeykitchen.com/wp-content/uploads/2021/05/20210227170516_IMG_3186.jpg?fit=1200%2C1200&ssl=1",
+      "wine": "https://www.penfolds.com/on/demandware.static/-/Sites/default/dw03464e01/1920x560--Penfolds-Cellar-Reserve-Range.png",
+      "dessert": "https://cocoacircle.com/wp-content/uploads/delicious-recipes/images/recipes//recipe_8512.jpg"
+    }
+  }
+  </script>
+  <!-- END IMAGE CONFIGURATION -->
+
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">Gourmet Haven</div>
+      <nav class="nav-links" id="nav-links">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#reserve">Reservations</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <!-- Replace the old Day/Night button -->
+<button id="themeToggle" class="theme-icon-btn" aria-label="Toggle theme" title="Toggle theme">
+  <span id="themeIcon" aria-hidden="true">🌙</span>
+</button>
+        <button id="cartOpen" class="cart-btn" aria-label="Open cart">🛒 <span id="cartCount">0</span></button>
+        <button id="hamburger" class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <h1>Experience Refined Dining</h1>
+      <p>Handcrafted dishes, seasonal ingredients, and curated wines.</p>
+      <div class="hero-cta">
+        <a href="#menu" class="btn btn-primary">Order Now</a>
+        <a href="#reserve" class="btn btn-ghost">Reserve a Table</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Our Menu</h2>
+        <p>Choose a category and add items to your order.</p>
+      </div>
+      <div class="tabs">
+        <button class="tab active" data-category="starters">Starters</button>
+        <button class="tab" data-category="mains">Mains</button>
+        <button class="tab" data-category="desserts">Desserts</button>
+        <button class="tab" data-category="wine">Wine</button>
+      </div>
+      <div id="menuGrid" class="grid"></div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Chef's Highlights</h2>
+        <p>Seasonal creations and limited-time pairings.</p>
+      </div>
+      <div class="highlights">
+        <div class="highlight-card">
+          <div class="highlight-image" id="highlight-mushrooms"></div>
+          <h3>Foraged Mushroom Medley</h3>
+          <p>Earthy, aromatic, finished with a hint of truffle.</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-image" id="highlight-wine"></div>
+          <h3>Cellar Reserve Pairing</h3>
+          <p>Sommelier-selected wine flight to elevate each course.</p>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-image" id="highlight-dessert"></div>
+          <h3>Cocoa Noir Finale</h3>
+          <p>A decadent dark chocolate experience to close the evening.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reserve" class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Reserve a Table</h2>
+        <p>Plan your visit in seconds. Instant confirmation on submit.</p>
+      </div>
+      <form id="reservationForm" class="form card">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="resName">Full Name</label>
+            <input id="resName" type="text" placeholder="John Doe" required/>
+          </div>
+          <div class="form-field">
+            <label for="resEmail">Email</label>
+            <input id="resEmail" type="email" placeholder="you@example.com" required/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="resPhone">Phone</label>
+            <input id="resPhone" type="tel" placeholder="+1 555 123 4567" required/>
+          </div>
+          <div class="form-field">
+            <label for="resGuests">Guests</label>
+            <select id="resGuests" required>
+              <option value="" disabled selected>Select</option>
+              <option>1</option><option>2</option><option>3</option>
+              <option>4</option><option>5</option><option>6</option>
+              <option>7</option><option>8+</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="resDate">Date</label>
+            <input id="resDate" type="date" required/>
+          </div>
+          <div class="form-field">
+            <label for="resTime">Time</label>
+            <input id="resTime" type="time" required/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field full">
+            <label for="resNote">Notes (optional)</label>
+            <textarea id="resNote" rows="3" placeholder="Occasion, preferences, allergies..."></textarea>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Submit Reservation</button>
+          <span id="reservationStatus" class="status"></span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>Gourmet Haven</h3>
+        <p>123 Culinary Street, Food City</p>
+        <p>+1 (555) 123-4567</p>
+        <p>hello@gourmethaven.example</p>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <p>Mon–Thu: 11:30–21:00</p>
+        <p>Fri–Sat: 11:30–22:30</p>
+        <p>Sun: 12:00–20:00</p>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <form id="newsletterForm" class="newsletter">
+          <input id="newsletterEmail" type="email" placeholder="you@example.com" required/>
+          <button class="btn btn-outline" type="submit">Subscribe</button>
+        </form>
+        <span id="newsletterStatus" class="status"></span>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="year"></span> Gourmet Haven. All rights reserved.</p>
+      <button id="backToTop" class="btn btn-ghost small">Back to top ↑</button>
+    </div>
+  </footer>
+
+  <aside id="cart" class="cart">
+    <div class="cart-header">
+      <h3>Your Order</h3>
+      <button id="cartClose" class="icon-btn" aria-label="Close cart">✕</button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-summary">
+      <div class="row">
+        <span>Subtotal</span><span id="subtotal">$0.00</span>
+      </div>
+      <div class="row">
+        <span>Tax (8%)</span><span id="tax">$0.00</span>
+      </div>
+      <div class="row total">
+        <span>Total</span><span id="total">$0.00</span>
+      </div>
+      <button id="checkoutBtn" class="btn btn-primary">Checkout</button>
+      <button id="clearCart" class="btn btn-outline">Clear Cart</button>
+    </div>
+  </aside>
+  <div id="cartBackdrop" class="backdrop"></div>
+
+  <dialog id="checkoutModal" class="modal">
+    <form method="dialog" class="modal-card" id="checkoutForm">
+      <div class="modal-header">
+        <h3>Checkout</h3>
+        <button class="icon-btn" id="checkoutClose" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-field">
+          <label for="coName">Name</label>
+          <input id="coName" type="text" required />
+        </div>
+        <div class="form-field">
+          <label for="coEmail">Email</label>
+          <input id="coEmail" type="email" required />
+        </div>
+        <div class="form-field">
+          <label for="coPhone">Phone</label>
+          <input id="coPhone" type="tel" required />
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" id="confirmCheckout" type="submit">Confirm & Generate Receipt</button>
+        <button class="btn btn-ghost" value="cancel">Cancel</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="receiptModal" class="modal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Receipt</h3>
+        <button class="icon-btn" id="receiptClose" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body" id="receiptBody">
+        <!-- Injected by JS: itemized list, totals, order number -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline" id="printReceipt">Print</button>
+        <button class="btn btn-primary" id="newOrder">New Order</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
